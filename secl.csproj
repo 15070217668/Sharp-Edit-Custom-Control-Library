@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60DA29ED-ABA3-4F04-92D4-FB8316CC6212}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>secl</RootNamespace>
+    <AssemblyName>Sharp Edit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.FtpClient">
+      <HintPath>..\..\..\..\..\Desktop\System.Net.FtpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutocompleteItem.cs" />
+    <Compile Include="AutocompleteMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoCompleteMenuCreator.cs" />
+    <Compile Include="Bookmarks.cs" />
+    <Compile Include="Char.cs" />
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="EventArgsEx.cs" />
+    <Compile Include="FtpClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interop\IconHelper.cs" />
+    <Compile Include="Interop\IconListManager.cs" />
+    <Compile Include="Interop\Updater.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Form\ControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocumentMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DWM.cs" />
+    <Compile Include="EncodingDetector.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="ExportToHTML.cs" />
+    <Compile Include="ExportToRTF.cs" />
+    <Compile Include="GDI32.cs" />
+    <Compile Include="GDIplus.cs" />
+    <Compile Include="Interop\Extention.cs" />
+    <Compile Include="Kernel32.cs" />
+    <Compile Include="MouseState.cs" />
+    <Compile Include="PsAPI.cs" />
+    <Compile Include="SharpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileTextSource.cs" />
+    <Compile Include="FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindForm.Designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoToForm.designer.cs">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hints.cs" />
+    <Compile Include="Hotkeys.cs" />
+    <Compile Include="HotkeysEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotkeysEditorForm.designer.cs">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LimitedStack.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="LinesAccessor.cs" />
+    <Compile Include="MacrosManager.cs" />
+    <Compile Include="Place.cs" />
+    <Compile Include="PlatformType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceForm.designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ruler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ruler.designer.cs">
+      <DependentUpon>Ruler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell32.cs" />
+    <Compile Include="Structs.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="SyntaxDescriptor.cs" />
+    <Compile Include="SyntaxHighlighter.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="TextSource.cs" />
+    <Compile Include="TypeDescriptor.cs" />
+    <Compile Include="UnfocusablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User32.cs" />
+    <Compile Include="VisualMarker.cs" />
+    <Compile Include="Win32Errors.cs" />
+    <Compile Include="Windows\Form\Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Form\Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Form\Imaging\PaintControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Form\TagObject.cs" />
+    <Compile Include="Windows\Form\ThemeManager.cs" />
+    <Compile Include="Windows\Form\ThemeStyle.cs" />
+    <Compile Include="Windows\Form\WebBrowserWrapper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\NativeMethods.cs" />
+    <Compile Include="Windows\TabControl\TabStyle.cs" />
+    <Compile Include="Windows\TabControl\TabStyleProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleAngledProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleChromeProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleDefaultProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleIE8Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleNoneProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleRoundedProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleVisualStudioProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\TabStyleProviders\TabStyleVS2010Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\TabControl\ThemedColors.cs" />
+    <Compile Include="WinMM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SharpControl.resx">
+      <DependentUpon>SharpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoToForm.resx">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotkeysEditorForm.resx">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceForm.resx">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
